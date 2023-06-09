@@ -1,0 +1,85 @@
+'use client';
+
+import { useEffect, useRef, useState } from "react";
+import { IoRepeat, IoSearch } from "react-icons/io5";
+import Button from "../Button";
+import DateInput from "../DateInput";
+import Input from "../Input";
+import { useInView } from "framer-motion";
+import { useHeaderSticky } from "@/contexts/HeaderStickyContext";
+
+
+export default function SearchTripForm() {
+    const stickyControlerRef = useRef<HTMLDivElement>(null);
+    const isStickerControlerInView = useInView(stickyControlerRef);
+    const { isSticked, setIsSticked } = useHeaderSticky();
+
+    const [origem, setOrigem] = useState('Rio de Janeiro - RJ');
+    const [destino, setDestino] = useState('Florianópolis - SC');
+
+    const handleSwitch = () => {
+        let og = origem;
+        setOrigem(destino);
+        setDestino(og);
+    }
+
+    useEffect(() => {
+        setIsSticked(!isStickerControlerInView)
+    }, [isStickerControlerInView])
+
+    return (
+        <>
+            <div ref={stickyControlerRef} className='h-[14vh] mb-24 w-full' />
+            <div className="flex justify-center items-start sticky top-[5.5rem] w-full h-56">
+                <div className={
+                    !isSticked
+                        ? "flex flex-col items-end border border-stone-500 rounded-xl w-auto mx-6 bg-stone-700/80 backdrop-blur-md p-7 space-y-6"
+                        : "flex flex-row items-end border border-stone-500 rounded-xl w-auto bg-stone-700/80 backdrop-blur-md p-4 "
+                }
+                >
+                    <div className='flex flex-row w-full justify-between items-end space-x-2'>
+                        <Input defaultValue={origem} label='Origem' inputName='origem' inputId="origem" InputPlaceholder="digite a cidade de origem" />
+                        <button
+                            onClick={handleSwitch}
+                            className="transition-all duration-100 focus:outline-none focus:ring flex justify-center items-center border border-stone-500 fill-stone-500 bg-transparent hover:bg-stone-600 rounded-lg h-9 w-9 p-auto"
+                        >
+                            <IoRepeat className="h-6 w-6 text-stone-400" />
+                        </button>
+                        <Input defaultValue={destino} label='Destino' inputName='destino' inputId="destino" InputPlaceholder="digite a cidade de destino" />
+                        <div className="flex flex-row items-end space-x-2">
+                            <DateInput value='28/12' label='Data de ida' inputName='ida' inputId="ida" InputPlaceholder="Ida" />
+                            <span className='flex items-center justify-center h-9 w-auto text-stone-500'>
+                                até
+                            </span>
+                            <DateInput value='15/01' label='Data de volta' inputName='volta' inputId="volta" InputPlaceholder="Volta" />
+                        </div>
+
+                    </div>
+                    {
+                        !isSticked
+                            ? <Button
+                                // className='rounded-lg  p-0 m-0 w-14 max-h-9 ml-3'
+                                className={!isSticked ? 'rounded-lg py-7 px-8 w-full' : 'rounded-lg  p-0 m-0 w-2 max-h-9 ml-3 hidden'}
+                                contentClassName={!isSticked ? "justify-between" : "p-0 m-0"}
+                                // contentClassName="p-0 m-0"
+                                rightIcon={!isSticked ? <IoSearch className="h-5 w-5" /> : null}
+                            >
+                                {
+                                    !isSticked
+                                        ? 'Buscar Viagens!'
+                                        : <IoSearch className="h-5 w-5" />
+                                }
+                            </Button>
+                            : <Button
+                                className='rounded-lg transition-colors p-0 m-0 w-14 max-h-9 ml-3'
+                                contentClassName="p-0 m-0"
+                            >
+                                <IoSearch className="h-5 w-5" />
+                            </Button>
+                    }
+
+                </div>
+            </div>
+        </>
+    );
+}
