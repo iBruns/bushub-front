@@ -33,8 +33,8 @@ export default function SearchTripForm() {
             <div className="flex justify-center items-start sticky top-[5.5rem] w-full h-56">
                 <div className={
                     !isSticked
-                        ? "flex flex-col items-end border border-stone-600 rounded-xl w-auto mx-6 bg-stone-700/60 backdrop-blur-md p-7 space-y-6"
-                        : "flex flex-row items-end border border-stone-600 rounded-xl w-auto bg-stone-700/60 backdrop-blur-md p-4 "
+                        ? " flex flex-col items-end border border-stone-600 rounded-xl w-auto mx-6 bg-stone-700/60 backdrop-blur-md p-7 space-y-6"
+                        : " flex flex-row items-end border border-stone-600 rounded-xl w-auto bg-stone-700/60 backdrop-blur-md p-4 "
                 }
                 >
                     <div className='flex flex-row w-full justify-between items-end space-x-2'>
@@ -58,17 +58,11 @@ export default function SearchTripForm() {
                     {
                         !isSticked
                             ? <Button
-                                // className='rounded-lg  p-0 m-0 w-14 max-h-9 ml-3'
-                                className={!isSticked ? 'rounded-lg py-7 px-8 w-full' : 'rounded-lg  p-0 m-0 w-2 max-h-9 ml-3 hidden'}
+                                className={!isSticked ? 'rounded-lg py-7 px-8 w-full' : 'rounded-lg  p-0 m-0 h-1 w-1 hidden'}
                                 contentClassName={!isSticked ? "justify-between" : "p-0 m-0"}
-                                // contentClassName="p-0 m-0"
-                                rightIcon={!isSticked ? <IoSearch className="h-5 w-5" /> : null}
+                                rightIcon={<IoSearch className="h-5 w-5" />}
                             >
-                                {
-                                    !isSticked
-                                        ? 'Buscar Viagens!'
-                                        : <IoSearch className="h-5 w-5" />
-                                }
+                                Buscar Viagens!
                             </Button>
                             : <Button
                                 className='rounded-lg transition-colors p-0 m-0 w-14 max-h-9 ml-3'
