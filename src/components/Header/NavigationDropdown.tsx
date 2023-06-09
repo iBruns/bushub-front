@@ -30,7 +30,7 @@ export default function NavigationDropdown({ label }: NavigationDropdownProps) {
             onBlur={handleClose}
             className={`w-28 h-full font-sm font-light text-stone-300 space-x-3 flex justify-center items-center ${styleSettings}`}
         >
-            <p className="">{label}</p>
+            <span>{label}</span>
             <IoChevronDown
                 className={
                     isOpen ? "transition-transform duration-200 origin-center rotate-180"

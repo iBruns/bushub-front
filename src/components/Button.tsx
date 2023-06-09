@@ -31,7 +31,7 @@ export default function Button({ children, className, contentClassName, preset, 
         }
         >
             <div className={`h-full w-full flex flex-row space-x-3 items-center justify-center ${contentClassName}`}>
-                {children && <p>{children}</p>} {rightIcon}
+                {children && <span className="truncate">{children}</span>} {rightIcon}
             </div>
         </button>
     )
