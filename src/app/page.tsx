@@ -15,7 +15,7 @@ export default function Home() {
 
         Você compra a sua viagem direto no site ou no app e conta com diversas opções de ponto de embarque e desembarque, sem fila e sem burocracia. É tudo mais rápido, prático e você ainda paga menos pra viajar. É do app direto pra poltrona do ônibus. Com a Buser, você escolhe o destino e viaja numa boa! Vai de Buser!
       </div>
-      <div className='fixed top-7 right-7'>
+      <div className='fixed top-8 right-8'>
         <Switch />
       </div>
     </main>

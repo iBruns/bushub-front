@@ -25,7 +25,7 @@ export default function Header() {
             >
                 <Button
                     preset='ghost'
-                    className={isSticked ? 'h-9 min-w-max backdrop-blur-md bg-stone-700/70' : 'min-w-max'}
+                    className={isSticked ? 'h-9 min-w-max backdrop-blur-lg' : 'min-w-max'}
                 >
                     <Image
                         src={Logo}
@@ -36,8 +36,8 @@ export default function Header() {
                 <div className=
                     {
                         !isSticked
-                            ? 'transition-all duration-100 backdrop-blur-md h-10 w-full bg-stone-700/80 rounded-full border border-stone-500 flex px-14 flex-row justify-around align-middle'
-                            : 'transition-all duration-100 backdrop-blur-md h-9 w-full bg-stone-700/80 rounded-full border border-stone-500 flex px-14 flex-row justify-around align-middle'
+                            ? 'transition-all duration-100 backdrop-blur-md h-10 w-full bg-stone-700/60 rounded-full border border-stone-600 flex px-14 flex-row justify-around align-middle'
+                            : 'transition-all duration-100 backdrop-blur-md h-9 w-full bg-stone-700/60 rounded-full border border-stone-600 flex px-14 flex-row justify-around align-middle'
 
                     }
                 >
@@ -46,7 +46,7 @@ export default function Header() {
                     <NavigationButton label='sobre nós' />
                 </div>
                 <Button
-                    className={isSticked ? 'h-9 backdrop-blur-md bg-stone-700/70' : ''}
+                    className={isSticked ? 'h-9 backdrop-blur-lg' : ''}
                     preset='outline'
                     rightIcon={<IoChatbubble />}
                 >

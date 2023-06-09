@@ -33,8 +33,8 @@ export default function SearchTripForm() {
             <div className="flex justify-center items-start sticky top-[5.5rem] w-full h-56">
                 <div className={
                     !isSticked
-                        ? "flex flex-col items-end border border-stone-500 rounded-xl w-auto mx-6 bg-stone-700/80 backdrop-blur-md p-7 space-y-6"
-                        : "flex flex-row items-end border border-stone-500 rounded-xl w-auto bg-stone-700/80 backdrop-blur-md p-4 "
+                        ? "flex flex-col items-end border border-stone-600 rounded-xl w-auto mx-6 bg-stone-700/60 backdrop-blur-md p-7 space-y-6"
+                        : "flex flex-row items-end border border-stone-600 rounded-xl w-auto bg-stone-700/60 backdrop-blur-md p-4 "
                 }
                 >
                     <div className='flex flex-row w-full justify-between items-end space-x-2'>
