@@ -67,15 +67,19 @@ export default function SearchTripForm() {
                     {
                         !isSticked
                             ? <Button
-                                className={!isSticked ? 'rounded-lg py-7 px-8 w-full' : 'rounded-lg  p-0 m-0 h-1 w-1 hidden'}
+                                className={!isSticked ? 'rounded-lg py-7 px-8 w-full' : 'rounded-lg  p-0 m-0 h-0 w-0'}
                                 contentClassName={!isSticked ? "justify-between" : "p-0 m-0"}
                                 rightIcon={<IoSearch className="h-5 w-5" />}
                             >
                                 Buscar Viagens!
                             </Button>
                             : <Button
-                                className='rounded-lg transition-colors p-0 m-0 w-14 max-h-9 ml-3'
+                                preset="unstyled"
                                 contentClassName="p-0 m-0"
+                                className='bg-sky-400 hover:bg-sky-500 rounded-lg p-0 m-0 w-14 ml-3 focus:outline-none focus:ring text-sm text-center text-white h-9 px-auto font-bold '
+                                style={{
+                                    transition: 'background-color 200ms, box-shadow 200ms'
+                                }}
                             >
                                 <IoSearch className="h-5 w-5" />
                             </Button>
