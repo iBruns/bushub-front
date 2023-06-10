@@ -10,7 +10,7 @@ export default function Home() {
     <main className='max-w-5xl mx-auto sm:px-6 lg:px-8 h-[500vh]'>
       <Header />
       <SearchTripForm />
-      <div className='w-full mx-auto px-4 mt-[50vh]'>
+      <div className='w-full mx-auto px-1 mt-[50vh]'>
         <div className='w-full pt-12 px-6 border-t border-stone-700'>
           <p className='text-stone-200 text-justify'>
             A Buser é um jeito diferente pra sua viagem de ônibus. A plataforma conecta pessoas que querem viajar com as empresas de fretamento. Assim, as viagens chegam a custar menos que a metade do preço da rodoviária, além de contarem com seguro grátis, motoristas parceiros treinados, ônibus de qualidade, diversas opções de poltronas e tecnologias de segurança. E se tiver que remarcar, aqui tem facilidade e reembolso rápido.

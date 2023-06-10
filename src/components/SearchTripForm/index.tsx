@@ -29,23 +29,32 @@ export default function SearchTripForm() {
 
     return (
         <>
-            <div ref={stickyControlerRef} className='h-[14vh] mb-24 w-full' />
-            <div className="flex justify-center items-start sticky top-[5.5rem] w-full h-56">
+            <div ref={stickyControlerRef} className=' h-[14vh] mb-24 w-full ' />
+            <div className=" flex justify-center items-start sticky top-[5.5rem] w-full max-w-5xl h-56 ">
                 <div className={
                     !isSticked
-                        ? " flex flex-col items-end border border-stone-600 rounded-xl w-auto mx-6 bg-stone-700/60 backdrop-blur-md p-7 space-y-6"
-                        : " flex flex-row items-end border border-stone-600 rounded-xl w-auto bg-stone-700/60 backdrop-blur-md p-4 "
+                        ? " flex flex-col items-end border border-stone-600 rounded-xl w-full mx-6 bg-stone-700/60 backdrop-blur-md p-7 space-y-6"
+                        : " flex flex-row items-end border border-stone-600 rounded-xl w-full mx-0 bg-stone-700/60 backdrop-blur-md p-4 "
                 }
                 >
-                    <div className='flex flex-row w-full justify-between items-end space-x-2'>
-                        <Input defaultValue={origem} label='Origem' inputName='origem' inputId="origem" InputPlaceholder="digite a cidade de origem" />
+                    <div className={
+                        !isSticked
+                            ? 'flex flex-row w-full justify-between items-end space-x-2 '
+                            : 'flex flex-row flex-auto justify-between items-end space-x-2 '
+                    }
+                    >
+                        <Input
+                            className="w-full box-border text-base"
+                            defaultValue={origem} label='Origem' inputName='origem' inputId="origem" InputPlaceholder="digite a cidade de origem" />
                         <button
                             onClick={handleSwitch}
-                            className="transition-all duration-100 focus:outline-none focus:ring flex justify-center items-center border border-stone-500 fill-stone-500 bg-transparent hover:bg-stone-600 rounded-lg h-9 w-9 p-auto"
+                            className="transition-all duration-100 focus:outline-none focus:ring flex justify-center items-center border border-stone-500 fill-stone-500 bg-transparent hover:bg-stone-600 rounded-lg h-9 w-10 p-1"
                         >
                             <IoRepeat className="h-6 w-6 text-stone-400" />
                         </button>
-                        <Input defaultValue={destino} label='Destino' inputName='destino' inputId="destino" InputPlaceholder="digite a cidade de destino" />
+                        <Input
+                            className="w-full box-border text-base"
+                            defaultValue={destino} label='Destino' inputName='destino' inputId="destino" InputPlaceholder="digite a cidade de destino" />
                         <div className="flex flex-row items-end space-x-2">
                             <DateInput value='28/12' label='Data de ida' inputName='ida' inputId="ida" InputPlaceholder="Ida" />
                             <span className='flex items-center justify-center h-9 w-auto text-stone-500'>
@@ -72,7 +81,7 @@ export default function SearchTripForm() {
                             </Button>
                     }
                 </div>
-            </div>
+            </div >
         </>
     );
 }

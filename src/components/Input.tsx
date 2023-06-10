@@ -21,7 +21,7 @@ export default function Input({ className, InputPlaceholder, inputType = 'text',
         <div>
             <label className=" flex flex-col space-y-2">
                 <span className="text-stone-200 text-sm font-medium">{label}</span>
-                <input defaultValue={defaultValue} type={inputType} id={inputId} name={inputName} className={`transition-all duration-300 placeholder:text-stone-700 text-stone-200 rounded-md h-9 px-4 bg-stone-800/70 text-sm ${styleSettings}`} placeholder={InputPlaceholder} />
+                <input defaultValue={defaultValue} type={inputType} id={inputId} name={inputName} className={` transition-all duration-200 placeholder:text-stone-700 text-stone-200 rounded-md h-9 px-4 bg-stone-800/70 text-sm ${styleSettings}`} placeholder={InputPlaceholder} />
             </label>
         </div>
     );

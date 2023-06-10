@@ -20,7 +20,7 @@ export default function Header() {
             <div className={
                 !isSticked
                     ? 'z-10 mx-6 sticky top-0 px-2 flex flex-row items-center justify-center space-x-3 transition-all duration-300 pt-6 w-auto'
-                    : 'z-10 mx-1 sticky top-0 px-2 flex flex-row items-center justify-center space-x-4 transition-all duration-300 pt-6 w-auto'
+                    : 'z-10 mx-2 sticky top-0 px-2 flex flex-row items-center justify-center space-x-4 transition-all duration-300 pt-6 w-auto'
             }
             >
                 <Button

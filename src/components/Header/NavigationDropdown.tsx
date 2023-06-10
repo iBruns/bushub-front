@@ -28,7 +28,7 @@ export default function NavigationDropdown({ label }: NavigationDropdownProps) {
         <button
             onFocus={handleOpen}
             onBlur={handleClose}
-            className={`w-28 h-full font-sm font-light text-stone-300 space-x-3 flex justify-center items-center ${styleSettings}`}
+            className={` transition-all duration-200 w-28 h-full font-sm font-light text-stone-300 space-x-3 flex justify-center items-center ${styleSettings}`}
         >
             <span>{label}</span>
             <IoChevronDown
