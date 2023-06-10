@@ -45,7 +45,7 @@ export default function SearchTripForm() {
                     >
                         <Input
                             className="w-full box-border text-base"
-                            defaultValue={origem} label='Origem' inputName='origem' inputId="origem" InputPlaceholder="digite a cidade de origem" />
+                            value={origem} label='Origem' inputName='origem' inputId="origem" InputPlaceholder="digite a cidade de origem" />
                         <button
                             onClick={handleSwitch}
                             className="transition-all duration-100 focus:outline-none focus:ring flex justify-center items-center border border-stone-500 fill-stone-500 bg-transparent hover:bg-stone-600 rounded-lg h-9 w-10 p-1"
@@ -54,7 +54,7 @@ export default function SearchTripForm() {
                         </button>
                         <Input
                             className="w-full box-border text-base"
-                            defaultValue={destino} label='Destino' inputName='destino' inputId="destino" InputPlaceholder="digite a cidade de destino" />
+                            value={destino} label='Destino' inputName='destino' inputId="destino" InputPlaceholder="digite a cidade de destino" />
                         <div className="flex flex-row items-end space-x-2">
                             <DateInput value='28/12' label='Data de ida' inputName='ida' inputId="ida" InputPlaceholder="Ida" />
                             <span className='flex items-center justify-center h-9 w-auto text-stone-500'>
