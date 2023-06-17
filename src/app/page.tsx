@@ -23,7 +23,7 @@ export default function Home() {
 
             <ShinyButton />
           </div>
-          <div className='relative z-10 flex items-center justify-center  w-full border-b  border-stone-700 space-x-6 pb-10 pt-6 mb-28'>
+          <div className='relative z-10 flex items-center justify-center  w-full border-b  border-stone-700 space-x-6 pb-10 pt-6 mb-[100vh]'>
             <SocialButton leftIcon={<IoLogoGithub className='text-lg' />}>/igordamm</SocialButton>
             <SocialButton leftIcon={<IoAtCircle className='text-lg' />}>igor.gomes.dev@gmail.com</SocialButton>
             <SocialButton leftIcon={<IoLogoLinkedin className='text-lg' />}>/igor-gomes-pereira</SocialButton>
