@@ -19,8 +19,8 @@ export default function Header() {
             <div className='h-4 w-full' />
             <div className={
                 !isSticked
-                    ? 'z-10 mx-6 sticky top-0 px-2 flex flex-row items-center justify-center space-x-3 transition-all duration-300 pt-6 w-auto'
-                    : 'z-10 mx-2 sticky top-0 px-2 flex flex-row items-center justify-center space-x-4 transition-all duration-300 pt-6 w-auto'
+                    ? 'z-20 mx-6 sticky top-0 px-2 flex flex-row items-center justify-center space-x-3 transition-all duration-300 pt-6 w-auto'
+                    : 'z-20 mx-2 sticky top-0 px-2 flex flex-row items-center justify-center space-x-4 transition-all duration-300 pt-6 w-auto'
             }
             >
                 <Button
@@ -30,7 +30,7 @@ export default function Header() {
                     <Image
                         src={Logo}
                         alt='Logo vai bus'
-                        className={isSticked ? 'w-[4.6rem] transition-all duration-100' : 'w-20 transition-all duration-100'}
+                        className={isSticked ? 'w-20 transition-all duration-100' : 'w-[5.5rem] transition-all duration-100'}
                     />
                 </Button>
                 <div className=
@@ -38,7 +38,6 @@ export default function Header() {
                         !isSticked
                             ? 'transition-all duration-100 backdrop-blur-md h-10 w-full bg-stone-700/60 rounded-full border border-stone-600 flex px-14 flex-row justify-around align-middle'
                             : 'transition-all duration-100 backdrop-blur-md h-9 w-full bg-stone-700/60 rounded-full border border-stone-600 flex px-14 flex-row justify-around align-middle'
-
                     }
                 >
                     <NavigationDropdown label='promoções' />

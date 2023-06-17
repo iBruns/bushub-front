@@ -30,7 +30,7 @@ export default function SearchTripForm() {
     return (
         <>
             <div ref={stickyControlerRef} className=' h-[14vh] mb-24 w-full ' />
-            <div className=" flex justify-center items-start sticky top-[5.5rem] w-full max-w-5xl h-56 ">
+            <div className=" z-20 flex justify-center items-start sticky top-[5.5rem] w-full max-w-5xl h-0 ">
                 <div className={
                     !isSticked
                         ? " flex flex-col items-end border border-stone-600 rounded-xl w-full mx-6 bg-stone-700/60 backdrop-blur-md p-7 space-y-6"

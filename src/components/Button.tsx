@@ -1,5 +1,4 @@
 import { CSSProperties } from "react"
-import { IconType } from "react-icons/lib"
 
 interface ButtonProps {
     children: React.ReactNode
